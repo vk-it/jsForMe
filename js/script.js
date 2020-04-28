@@ -98,7 +98,7 @@ console.log(mainList)
 //     console.log('В сутках только 24 часа');
 // }
 
-// Переписать цикл for в whike и do while
+// Переписать цикл for в while и do while
 
 // let i = 0;
 
