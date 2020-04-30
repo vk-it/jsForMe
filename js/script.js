@@ -59,44 +59,83 @@
 //     x = y;
 //     console.log(x)
 
-let money = prompt('Ваш бюджет?');
-let name = prompt('Название вашего магазина?');
+let money,
+    name,
+    time,
+    price
+
+function start() {
+    // money = prompt('Ваш бюджет?');
+
+    while (isNaN(money) || money == '' || money == null) {
+        money = prompt('Ваш бюджет?');
+    }
+    name = prompt('Название вашего магазина?').toUpperCase();
+    time = 19;
+}
+
+start();
 
 let mainList = {
     budget: money,
     shopName: name,
     shopGoods: [],
     employers: {},
-    open: false
+    open: false,
+    discount: false
 }
 
-for (let i = 0; i < 5; i++) {
-
-    let a = prompt('Какой тип товаров будем продавать?');
-
-    if ((typeof (a)) === 'string' && (typeof (a)) != null && a != '' && a.length < 50) {
-        console.log('Всё верно!');
-        mainList.shopGoods[i] = a;
-    } else {
-        i = i - 1;
+function systemCalculation() {
+    if (discount = true) {
+        price / 100 * 80;
     }
 }
 
-alert(mainList.budget / 30);
+function office() {
+    for (let i = 0; i < 3; i++) {
+
+        let b = promt('Введите имя сотрудника');
+        if ((typeof (b)) === 'string' && (typeof (b)) != null && b != '' && b.length < 50) {
+            console.log('Всё верно!');
+            mainList.employers[i] = b;
+        } else {
+            i = i - 1;
+        }
+    }
+}
+office();
+
+function chooseGoods() {
+    for (let i = 0; i < 5; i++) {
+
+        let a = prompt('Какой тип товаров будем продавать?');
+
+        if ((typeof (a)) === 'string' && (typeof (a)) != null && a != '' && a.length < 50) {
+            console.log('Всё верно!');
+            mainList.shopGoods[i] = a;
+        } else {
+            i = i - 1;
+        }
+    }
+}
+
+chooseGoods();
+
+alert('Ежедневный бюджет' + mainList.budget / 30);
 
 console.log(mainList)
 
-// let time = 19;
-
-// if (time < 0) {
-//     console.log('Такого просто не может быть');
-// } else if (time > 8 && time < 20) {
-//     console.log('Время работать');
-// } else if (time < 24) {
-//     console.log('Уже слишком поздно');
-// } else {
-//     console.log('В сутках только 24 часа');
-// }
+function workTime(time) {
+    if (time < 0) {
+        console.log('Такого просто не может быть');
+    } else if (time > 8 && time < 20) {
+        console.log('Время работать');
+    } else if (time < 24) {
+        console.log('Уже слишком поздно');
+    } else {
+        console.log('В сутках только 24 часа');
+    }
+}
 
 // Переписать цикл for в while и do while
 
