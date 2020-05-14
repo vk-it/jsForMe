@@ -62,7 +62,7 @@
 let money,
     name,
     time,
-    price
+    price = 100
 
 function start() {
     // money = prompt('Ваш бюджет?');
@@ -73,7 +73,6 @@ function start() {
     name = prompt('Название вашего магазина?').toUpperCase();
     time = 19;
 }
-
 start();
 
 let mainList = {
@@ -86,20 +85,26 @@ let mainList = {
 }
 
 function systemCalculation() {
-    if (discount = true) {
-        price / 100 * 80;
+    if (mainList.discount == true) {
+        price *= 8 / 10;
     }
+    console.log("цена: " + price);
 }
+systemCalculation();
 
 function office() {
-    for (let i = 0; i < 3; i++) {
+    let i = 1;
+    while (Object.keys(mainList.employers).length < 4) {
+        let b = prompt("Введите имя сотрудника");
+        // валидацию не менял
+        if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
+            console.log("Всё верно!");
 
-        let b = promt('Введите имя сотрудника');
-        if ((typeof (b)) === 'string' && (typeof (b)) != null && b != '' && b.length < 50) {
-            console.log('Всё верно!');
             mainList.employers[i] = b;
+            console.log(i + ": " + mainList.employers[i]);
+            i++;
         } else {
-            i = i - 1;
+            // i = i - 1/* ? */
         }
     }
 }
@@ -118,10 +123,9 @@ function chooseGoods() {
         }
     }
 }
+// chooseGoods();
 
-chooseGoods();
-
-alert('Ежедневный бюджет' + mainList.budget / 30);
+alert('Ежедневный бюджет' + " " + mainList.budget / 30);
 
 console.log(mainList)
 
@@ -136,7 +140,7 @@ function workTime(time) {
         console.log('В сутках только 24 часа');
     }
 }
-
+// workTime(18);
 // Переписать цикл for в while и do while
 
 // let i = 0;
