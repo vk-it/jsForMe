@@ -1,3 +1,4 @@
+// Моё решение
 // let price
 
 // let mainList = {
@@ -28,34 +29,44 @@
 // }
 // office();
 
-let price = 100; // сделаем так.
+// Мне помогли с решение
+// let price = 100; // сделаем так.
 
-let mainList = {
-    employers: {},
-    discount: false
-};
+// let mainList = {
+//     employers: {},
+//     discount: false
+// };
 
-function systemCalculation() {
-    if (mainList.discount == true) {
-        price *= 8 / 10;
-    };
-    console.log("цена: " + price);
-}
+// function systemCalculation() {
+//     if (mainList.discount == true) {
+//         price *= 8 / 10;
+//     };
+//     console.log("цена: " + price);
+// }
 
-function office() {
-    let i = 1;
-    while (Object.keys(mainList.employers).length < 4) {
-        let b = prompt("Введите имя сотрудника");
-        // валидацию не менял
-        if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
-            console.log("Всё верно!");
+// function office() {
+//     let i = 1;
+//     while (Object.keys(mainList.employers).length < 4) {
+//         let b = prompt("Введите имя сотрудника");
+//         // валидацию не менял
+//         if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
+//             console.log("Всё верно!");
 
-            mainList.employers[i] = b;
-            console.log(i + ": " + mainList.employers[i]);
-            i++;
-        } else {/* ? */
-        }
-    }
-}
-systemCalculation();
-office();
+//             mainList.employers[i] = b;
+//             console.log(i + ": " + mainList.employers[i]);
+//             i++;
+//         } else {
+//             // i = i - 1/* ? */
+//         }
+//     }
+// }
+// systemCalculation();
+// office();
+
+// Вопрос: почему i++ после console.log()?
+// let num = 50
+// while (num < 55) {
+//     num++;
+//     console.log(num);
+//     num++;
+// }
