@@ -86,7 +86,8 @@ let mainList = {
 
 function systemCalculation() {
     if (mainList.discount == true) {
-        price *= 8 / 10;
+        // price *= 8 / 10;
+        price - (price / 100) * 80;
     }
     console.log("цена: " + price);
 }
@@ -125,7 +126,9 @@ function chooseGoods() {
 }
 // chooseGoods();
 
-alert('Ежедневный бюджет' + " " + mainList.budget / 30);
+function dayBudget() {
+    alert('Ежедневный бюджет' + " " + mainList.budget / 30);
+}
 
 console.log(mainList)
 
