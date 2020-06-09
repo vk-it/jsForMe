@@ -87,7 +87,7 @@ let mainList = {
 function systemCalculation() {
     if (mainList.discount == true) {
         // price *= 8 / 10;
-        price - (price / 100) * 80;
+        price = (price / 100) * 80;
     }
     console.log("цена: " + price);
 }
