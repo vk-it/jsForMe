@@ -66,7 +66,7 @@ let money,
 
 function start() {
     // money = prompt('Ваш бюджет?');
-
+    // Вопрос по while, как вызывается цикл, если не используется данные ввода параметры, что его запускает?
     while (isNaN(money) || money == '' || money == null) {
         money = prompt('Ваш бюджет?');
     }
