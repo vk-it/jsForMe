@@ -72,15 +72,45 @@
 //     num++;
 // }
 
-let money
+// let money
 
-function start() {
-    // money = prompt('Ваш бюджет?');
+// function start() {
+//     // money = prompt('Ваш бюджет?');
 
-    while (isNaN(money) || money == '' || money == null) {
-        money = prompt('Ваш бюджет?');
-    }
-    name = prompt('Название вашего магазина?').toUpperCase();
-    time = 19;
+//     while (isNaN(money) || money == '' || money == null) {
+//         money = prompt('Ваш бюджет?');
+//     }
+//     name = prompt('Название вашего магазина?').toUpperCase();
+//     time = 19;
+// }
+// start();
+let mainList = {
+    employers: {},
+    shopName: name,
 }
-start();
+
+// function hireEmployers() {
+//     for (let i = 1; i < 4; i++) {
+//         let name = prompt("Имя сотрудника")
+//         mainList.employers[i] = name;
+//     }
+// }
+// hireEmployers()
+
+function hireEmployers() {
+    let i = 1;
+    while (Object.keys(mainList.employers).length < 4) {
+        let b = prompt("Введите имя сотрудника");
+        // валидацию не менял
+        if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
+            console.log("Всё верно!");
+
+            mainList.employers[i] = b;
+            console.log(i + ": " + mainList.employers[i]);
+            i++;
+        } else {
+            // i = i - 1/* ? */
+        }
+    }
+}
+hireEmployers()
