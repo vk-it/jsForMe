@@ -59,10 +59,10 @@
 //     x = y;
 //     console.log(x)
 
-let money,
-    name,
-    time,
-    price = 100
+// let money,
+//     name,
+//     time,
+//     price = 100
 
 // function start() {
 //     // money = prompt('Ваш бюджет?');
@@ -75,63 +75,63 @@ let money,
 // }
 // start();
 
-let mainList = {
-    budget: money,
-    shopName: name,
-    shopGoods: [],
-    employers: {},
-    open: false,
-    discount: false,
-    shopItems: [],
-    chooseGoods: function chooseGoods() {
-        for (let i = 0; i < 5; i++) {
+// let mainList = {
+//     budget: money,
+//     shopName: name,
+//     shopGoods: [],
+//     employers: {},
+//     open: false,
+//     discount: false,
+//     shopItems: [],
+//     chooseGoods: function chooseGoods() {
+//         for (let i = 0; i < 5; i++) {
 
-            let a = prompt('Какой тип товаров будем продавать?');
+//             let a = prompt('Какой тип товаров будем продавать?');
 
-            if ((typeof (a)) === 'string' && (typeof (a)) != null && a != '' && a.length < 50) {
-                console.log('Всё верно!');
-                mainList.shopGoods[i] = a;
-            } else {
-                i = i - 1;
-            }
-        }
-    },
-    workTime: function workTime(time) {
-        if (time < 0) {
-            console.log('Такого просто не может быть');
-        } else if (time > 8 && time < 20) {
-            console.log('Время работать');
-            mainList.open = true;
-        } else if (time < 24) {
-            console.log('Уже слишком поздно');
-        } else {
-            console.log('В сутках только 24 часа');
-        }
-    },
-    dayBudget: function dayBudget() {
-        alert('Ежедневный бюджет' + " " + mainList.budget / 30);
-    },
-    makeDiscount: function makeDiscount() {
-        if (mainList.discount == true) {
-            // price *= 8 / 10;
-            price = (price / 100) * 80;
-        }
-        console.log("цена: " + price);
-    },
-    hireEmployers: function hireEmployers() {
-        for (let i = 1; i < 4; i++) {
-            let name = prompt("Имя сотрудника")
-            mainList.employers[i] = name;
-        }
-    },
-    chooseShopItems: function chooseShopItems() {
-        let items = prompt('Перечислите через запятую товары', '');
+//             if ((typeof (a)) === 'string' && (typeof (a)) != null && a != '' && a.length < 50) {
+//                 console.log('Всё верно!');
+//                 mainList.shopGoods[i] = a;
+//             } else {
+//                 i = i - 1;
+//             }
+//         }
+//     },
+//     workTime: function workTime(time) {
+//         if (time < 0) {
+//             console.log('Такого просто не может быть');
+//         } else if (time > 8 && time < 20) {
+//             console.log('Время работать');
+//             mainList.open = true;
+//         } else if (time < 24) {
+//             console.log('Уже слишком поздно');
+//         } else {
+//             console.log('В сутках только 24 часа');
+//         }
+//     },
+//     dayBudget: function dayBudget() {
+//         alert('Ежедневный бюджет' + " " + mainList.budget / 30);
+//     },
+//     makeDiscount: function makeDiscount() {
+//         if (mainList.discount == true) {
+//             // price *= 8 / 10;
+//             price = (price / 100) * 80;
+//         }
+//         console.log("цена: " + price);
+//     },
+//     hireEmployers: function hireEmployers() {
+//         for (let i = 1; i < 4; i++) {
+//             let name = prompt("Имя сотрудника")
+//             mainList.employers[i] = name;
+//         }
+//     },
+//     chooseShopItems: function chooseShopItems() {
+//         let items = prompt('Перечислите через запятую товары', '');
 
-        mainList.shopItems = items.split(',');
-        mainList.shopItems.push(prompt('Подождите, ещё ', ''));
-        mainList.shopItems.sort();
-    }
-}
+//         mainList.shopItems = items.split(',');
+//         mainList.shopItems.push(prompt('Подождите, ещё ', ''));
+//         mainList.shopItems.sort();
+//     }
+// }
 
 // function hireEmployers() {
 //     let i = 1;
