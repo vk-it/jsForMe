@@ -98,20 +98,36 @@ let mainList = {
 // }
 // hireEmployers()
 
-function hireEmployers() {
-    let i = 1;
-    while (Object.keys(mainList.employers).length < 4) {
-        let b = prompt("Введите имя сотрудника");
-        // валидацию не менял
-        if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
-            console.log("Всё верно!");
+// function hireEmployers() {
+//     let i = 1;
+//     while (Object.keys(mainList.employers).length < 4) {
+//         let b = prompt("Введите имя сотрудника");
+//         // валидацию не менял
+//         if (typeof b === "string" && typeof b != null && b != "" && b.length < 15) {
+//             console.log("Всё верно!");
 
-            mainList.employers[i] = b;
-            console.log(i + ": " + mainList.employers[i]);
-            i++;
-        } else {
-            // i = i - 1/* ? */
-        }
-    }
+//             mainList.employers[i] = b;
+//             console.log(i + ": " + mainList.employers[i]);
+//             i++;
+//         } else {
+//             // i = i - 1/* ? */
+//         }
+//     }
+// }
+// hireEmployers()
+
+
+obj = {
+    name: 'John',
+    age: 25,
+    isMarried: false
 }
-hireEmployers()
+
+console.log(obj['age']);
+
+var arr = ['plum', 'orange', 'apple'];
+console.log(arr[1]);
+
+alert('Hello!');
+
+confirm('Are you here?');
