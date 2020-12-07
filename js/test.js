@@ -117,17 +117,23 @@ let mainList = {
 // hireEmployers()
 
 
-obj = {
-    name: 'John',
-    age: 25,
-    isMarried: false
-}
+// obj = {
+//     name: 'John',
+//     age: 25,
+//     isMarried: false
+// }
 
-console.log(obj['age']);
+// console.log(obj['age']);
 
-var arr = ['plum', 'orange', 'apple'];
-console.log(arr[1]);
+// var arr = ['plum', 'orange', 'apple'];
+// console.log(arr[1]);
 
-alert('Hello!');
+// // alert('Hello!');
 
-confirm('Are you here?');
+// // confirm('Are you here?');
+ 
+var answer = +prompt('Вам есть 18?', '18'); 
+// var test = null;
+console.log(typeof(answer ));
+
+console.log('arr' + ' - object');
